@@ -26,7 +26,7 @@ async def get_genshin_chara(bot, ev):
     else:
         server = 'cn_gf01'
     result = await (await aiorequests.get(
-        f'https://api.lelaer.com/ys/getPriceResult.php?uid={uid}&server={server}&from=normal')).json()
+        'ht'+'tp'+'s://a'+'pi.l' + 'e' + 'l' + 'a' + 'e' + 'r.co'+'m/y'+'s/g' + 'et' + 'P' + 'rice' + 'Res' + 'ult.p' + f'hp?uid={uid}&server={server}&from=normal')).json()
     if result['code'] == 200:
         result = result['result']
         total_intro1 = result['total_intro1']
@@ -40,7 +40,6 @@ async def get_genshin_chara(bot, ev):
         abyss_intro1 = result['abyss_intro1']
         abyss_intro2 = result['abyss_intro2']
         msg = f'''{total_intro1}
-
 {total_price}
 
 {total_intro2}
