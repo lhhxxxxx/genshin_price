@@ -2,7 +2,7 @@ import json
 from hoshino import Service, priv, aiorequests
 
 sv_help = '''
-[原神估价+uid] 查询账号估价
+[原神估价 +uid] 查询账号估价
 '''.strip()
 
 sv = Service(
@@ -53,6 +53,6 @@ async def get_genshin_chara(bot, ev):
 {abyss_price}
 {abyss_intro1}
 {abyss_intro2}'''
-        await bot.send(ev, msg)
+        await bot.send(ev, msg, at_sender=True)
     else:
-        await bot.send(ev, result['result'])
+        await bot.send(ev, result['result'], at_sender=True)
